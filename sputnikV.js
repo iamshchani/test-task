@@ -1,5 +1,5 @@
 let containerArray = [];
-var limitNumber = 100; // Значение соответствует максимальной границе при работе метода Math.random(). Однако, мне неизвестно, как можно было бы "выцепить" значение переменной 'max'. Поэтому пришлось объявить еще одну переменную.
+let limitNumber = 100; // Значение соответствует максимальной границе при работе метода Math.random(). Однако, мне неизвестно, как можно было бы "выцепить" значение переменной 'max'. Поэтому пришлось объявить еще одну переменную.
 function naturalNumber(nN){
     nN = Number(prompt("Введите натуральное число"));
     if(!isNaN(nN) && nN > 0 && Number.isInteger(nN) && nN <= limitNumber){
@@ -17,7 +17,6 @@ function naturalNumber(nN){
             for(let j = 0; innerArray.length - j > 0; j++){
                 innerArray[j] = Number(Math.random().toFixed(4));
             }
-            // breakpoint
             if(i%2 == 0){
             containerArray[i] = innerArray.sort(function(a, b){
                 return a - b;
